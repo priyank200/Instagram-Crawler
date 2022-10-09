@@ -71,7 +71,7 @@ def likes_and_comments_scrapper(username_scrape, instance=None):
 
             n = 0
             count = 0
-            logger.info(f"Getting likes for {post_likes}")
+            logger.info("Getting likes for" + post_likes)
             for like in post_likes:
                 list_likers.append((like.username))
                 likers_file = open(username_scrape + "/likes_post.csv", "a+")
@@ -81,7 +81,7 @@ def likes_and_comments_scrapper(username_scrape, instance=None):
                     time.sleep(1000)
                 likers_file.write("\n")
                 likers_file.close()
-            x = {f"Count of post_{post_likes}": n}
+            x = {"Count of post" + post_likes + ": n"}
             y = str(json.dumps(x))
             count_comments = open(username_scrape + "/counts of likes in Post.json", "a+")
             count_comments.write(y)
@@ -89,7 +89,7 @@ def likes_and_comments_scrapper(username_scrape, instance=None):
             count_comments.close()
             n = 0
             count = 0
-            logger.info(f"Getting comments for {post_comments}")
+            logger.info("Getting comments for" +  post_comments)
             for comment in post_comments:
                 list_comment.append(comment.owner.username)
                 comment_file = open(username_scrape + "/comment_post.csv", "a+")
@@ -99,7 +99,7 @@ def likes_and_comments_scrapper(username_scrape, instance=None):
                 n += 1
                 comment_file.write("\n")
                 comment_file.close()
-            x = {f"Count of post_{post_comments}": n}
+            x = {"Count of post" + post_comments ": n")
             y = str(json.dumps(x))
             count_comments = open(username_scrape + "/counts of comments in Post.json", "a+")
             count_comments.write(y)
@@ -158,7 +158,7 @@ def insta_scrapper(username_scrape):
         logger.info("list of all the likers and commenters have been made\n")
     except Exception as e:
         logger.warning(e)
-        print(f"ERROR for", username_scrape)
+        print("ERROR for" + username_scrape)
 
 
 # function to collect username for scraping the data

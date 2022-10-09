@@ -99,7 +99,7 @@ def likes_and_comments_scrapper(username_scrape, instance=None):
                 n += 1
                 comment_file.write("\n")
                 comment_file.close()
-            x = {"Count of post" + post_comments ": n")
+            x = {"Count of post" + post_comments + ": n"}
             y = str(json.dumps(x))
             count_comments = open(username_scrape + "/counts of comments in Post.json", "a+")
             count_comments.write(y)

@@ -1,3 +1,0 @@
-instaloader
-pandas
-python-dotenv

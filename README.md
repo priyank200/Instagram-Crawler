@@ -11,36 +11,25 @@ os            | This Library help us to get the access password and username whi
 json          | we store the some of the data like general details and counts file in .json file so to manage them we used json library
 dotenv        | we add Python-dotenv to your application to make it load the configuration from a .env file
 
-* Bullet list
-    * Nested bullet
-          * Sub-nested bullet etc
-* Bullet list item 2
-
--OR-
-
- Markup : - Bullet list
-              - Nested bullet
-                  - Sub-nested bullet etc
-          - Bullet list item 2 
 
 ## Type of data scrap from and Instagram account 
 If the account is public 
-Markup: 1. General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
-        2. Profile picture. 
-        -Posts present in feed post by the owner of the account (All the images and videos). 
-        -text files of all the caption of all the corresponding post. 
-        -.csv file of follower's username. 
-        -.csv file of following's username. 
-        -List of the people like the post. 
-        -List of the people comment on the post. 
-        -List of count of likes on each post. 
-        -List of count of comments on each post.  
+1. General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
+2. Profile picture. 
+3. Posts present in feed post by the owner of the account (All the images and videos).
+4. text files of all the caption of all the corresponding post. 
+5. .csv file of follower's username. 
+6. .csv file of following's username.
+7. List of the people like the post.
+8. List of the people comment on the post. 
+9. List of count of likes on each post. 
+10. List of count of comments on each post.  
 If the account is private 
-Markup: -General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
-        -Profile picture. 
+1. General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
+2. Profile picture. 
 
 ## how to use
-step 1: Make a github clone using comment git clone comment
-step 2: Create a .env file with your own username and password 
-step 3: Put that file in same folder 
+1. Make a github clone using comment git clone comment
+2. Create a .env file with your own username and password 
+3. Put that file in same folder 
 

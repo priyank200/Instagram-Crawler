@@ -11,11 +11,12 @@ logger.addHandler(logging.StreamHandler())
 logger.setLevel(logging.INFO)
 load_dotenv()
 
-
+instance = instaloader.Instaloader(save_metadata=False, compress_json=False, max_connection_attempts=5)
+instance.login(user=os.environ['INSTA_USERNAME_2'], passwd=os.environ['INSTA_PASS_2'])
 def followers_scrapper(username_scrape):
     try:
-        instance = instaloader.Instaloader(save_metadata=False, compress_json=False, max_connection_attempts=5)
-        instance.login(user=os.environ['INSTA_USERNAME_1'], passwd=os.environ['INSTA_PASS_1'])
+        # instance = instaloader.Instaloader(save_metadata=False, compress_json=False, max_connection_attempts=5)
+        # instance.login(user=os.environ['INSTA_USERNAME_3'], passwd=os.environ['INSTA_PASS_3'])
         profile = instaloader.Profile.from_username(instance.context, username=username_scrape)
         follow_list = []
         count = 0
@@ -37,8 +38,8 @@ def followers_scrapper(username_scrape):
 
 def following_scrapper(username_scrape):
     try:
-        instance = instaloader.Instaloader(save_metadata=False, compress_json=False, max_connection_attempts=5)
-        instance.login(user=os.environ['INSTA_USERNAME_3'], passwd=os.environ['INSTA_PASS_3'])
+        # instance = instaloader.Instaloader(save_metadata=False, compress_json=False, max_connection_attempts=5)
+        # instance.login(user=os.environ['INSTA_USERNAME_3'], passwd=os.environ['INSTA_PASS_3'])
         profile = instaloader.Profile.from_username(instance.context, username=username_scrape)
         following_list = []
         count = 0
@@ -70,36 +71,36 @@ def likes_and_comments_scrapper(username_scrape, instance=None):
             post_comments = post.get_comments()
 
             n = 0
-            count = 0
-            logger.info("Getting likes for" + post_likes)
+            # count = 0
+            logger.info(f"Getting likes for {post_likes}")
             for like in post_likes:
                 list_likers.append((like.username))
                 likers_file = open(username_scrape + "/likes_post.csv", "a+")
                 likers_file.write(list_likers[n])
                 n += 1
-                if count % 1000 == 0:
-                    time.sleep(1000)
+                # if count % 1000 == 0:
+                #     time.sleep(1000)
                 likers_file.write("\n")
                 likers_file.close()
-            x = {"Count of post" + post_likes + ": n"}
+            x = {f"Count of post_{post_likes}": n}
             y = str(json.dumps(x))
             count_comments = open(username_scrape + "/counts of likes in Post.json", "a+")
             count_comments.write(y)
             count_comments.write("\n")
             count_comments.close()
             n = 0
-            count = 0
-            logger.info("Getting comments for" +  post_comments)
+            # count = 0
+            logger.info(f"Getting comments for {post_comments}")
             for comment in post_comments:
                 list_comment.append(comment.owner.username)
                 comment_file = open(username_scrape + "/comment_post.csv", "a+")
                 comment_file.write(list_comment[n])
-                if count % 1000 == 0:
-                    time.sleep(1000)
+                # if count % 1000 == 0:
+                #     time.sleep(1000)
                 n += 1
                 comment_file.write("\n")
                 comment_file.close()
-            x = {"Count of post" + post_comments + ": n"}
+            x = {f"Count of post_{post_comments}": n}
             y = str(json.dumps(x))
             count_comments = open(username_scrape + "/counts of comments in Post.json", "a+")
             count_comments.write(y)
@@ -147,7 +148,7 @@ def insta_scrapper(username_scrape):
         logger.info("Getting followers")
         followers_scrapper(username_scrape)
         logger.info("Done")
-        #
+
         logger.info("Getting following")
         following_scrapper(username_scrape)
         logger.info("Done")
@@ -158,7 +159,7 @@ def insta_scrapper(username_scrape):
         logger.info("list of all the likers and commenters have been made\n")
     except Exception as e:
         logger.warning(e)
-        print("ERROR for" + username_scrape)
+        print(f"ERROR for", username_scrape)
 
 
 # function to collect username for scraping the data
@@ -197,4 +198,5 @@ if __name__ == '__main__':
         follower_data = follower_data.drop([count])
         follower_data.to_csv("data/Instagram/data.csv", index=False)
         count += 1
+
 

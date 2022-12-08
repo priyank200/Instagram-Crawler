@@ -13,20 +13,21 @@ dotenv        | we add Python-dotenv to your application to make it load the con
 
 
 ## Type of data scrap from and Instagram account 
-If the account is public 
-1. General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
-2. Profile picture. 
-3. Posts present in feed post by the owner of the account (All the images and videos).
-4. text files of all the caption of all the corresponding post. 
-5. .csv file of follower's username. 
-6. .csv file of following's username.
-7. List of the people like the post.
-8. List of the people comment on the post. 
-9. List of count of likes on each post. 
-10. List of count of comments on each post.  
-If the account is private 
-1. General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
-2. Profile picture. 
+*If the account is public 
+  1. General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
+  2. Profile picture. 
+  3. Posts present in feed post by the owner of the account (All the images and videos).
+  4. text files of all the caption of all the corresponding post. 
+  5. .csv file of follower's username. 
+  6. .csv file of following's username.
+  7. List of the people like the post.
+  8. List of the people comment on the post. 
+  9. List of count of likes on each post. 
+  10. List of count of comments on each post.
+  
+*If the account is private 
+  1. General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
+  2. Profile picture. 
 
 ## how to use
 1. Make a github clone using comment git clone comment

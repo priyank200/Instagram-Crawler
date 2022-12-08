@@ -1,7 +1,7 @@
 # Instagram-Crawlers
 
 ## Libarires used
-*A.)Instaloader: - This is a powerful and intuitive Python API for Instagram, it has some internally applied method and structure which helps to scrap data from an Instagram account, we can also customize the function according to our need. 
+*A.)Instaloader: - This is a powerful and intuitive Python API for Instagram, it has some internally applied method and structure which helps to scrap data from an Instagram account, we can also customize the function according to our need.* 
 *B.) pandas: - This library is used to manage the data in csv files which were formed during scraping details of any account. 
 *C.) Logging: - This library is used to print the output in some specific manner like for printing any information, we have used a function logger.info(“ ”), for printing any warning while giving any exception we had used logger.warning(“ ”)  
 *D.) time: - This library is used to give break between scraping to decrease the “Too Many Queries” error dur Instaloader library. 

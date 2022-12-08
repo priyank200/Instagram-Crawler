@@ -14,8 +14,8 @@ dotenv        | we add Python-dotenv to your application to make it load the con
 
 ## Type of data scrap from and Instagram account 
 If the account is public 
-Markup: -General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
-        -Profile picture. 
+Markup: 1. General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
+        2. Profile picture. 
         -Posts present in feed post by the owner of the account (All the images and videos). 
         -text files of all the caption of all the corresponding post. 
         -.csv file of follower's username. 

@@ -29,7 +29,7 @@ dotenv        | we add Python-dotenv to your application to make it load the con
   1. General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
   2. Profile picture. 
 
-## how to use
+## How to use
 1. Make a github clone using comment git clone comment
 2. Create a .env file with your own username and password 
 3. Put that file in same folder 

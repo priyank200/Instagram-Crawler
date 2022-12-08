@@ -11,10 +11,10 @@ os            | This Library help us to get the access password and username whi
 json          | we store the some of the data like general details and counts file in .json file so to manage them we used json library
 dotenv        | we add Python-dotenv to your application to make it load the configuration from a .env file
 
- Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
+* Bullet list
+    * Nested bullet
+          * Sub-nested bullet etc
+* Bullet list item 2
 
 -OR-
 

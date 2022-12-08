@@ -11,11 +11,17 @@ os            | This Library help us to get the access password and username whi
 json          | we store the some of the data like general details and counts file in .json file so to manage them we used json library
 dotenv        | we add Python-dotenv to your application to make it load the configuration from a .env file
 
+ Markup : * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
 
- Markup : 1. A numbered list
-              1. A nested numbered list
-              2. Which is numbered
-          2. Which is numbered
+-OR-
+
+ Markup : - Bullet list
+              - Nested bullet
+                  - Sub-nested bullet etc
+          - Bullet list item 2 
 
 ## Type of data scrap from and Instagram account 
 If the account is public 

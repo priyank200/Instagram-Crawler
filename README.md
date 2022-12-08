@@ -13,7 +13,7 @@ dotenv        | we add Python-dotenv to your application to make it load the con
 
 
 ## Type of data scrap from and Instagram account 
-*If the account is public 
+* If the account is public 
   1. General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
   2. Profile picture. 
   3. Posts present in feed post by the owner of the account (All the images and videos).
@@ -25,7 +25,7 @@ dotenv        | we add Python-dotenv to your application to make it load the con
   9. List of count of likes on each post. 
   10. List of count of comments on each post.
   
-*If the account is private 
+* If the account is private 
   1. General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
   2. Profile picture. 
 

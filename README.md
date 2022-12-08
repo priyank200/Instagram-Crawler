@@ -12,6 +12,11 @@ json          | we store the some of the data like general details and counts fi
 dotenv        | we add Python-dotenv to your application to make it load the configuration from a .env file
 
 
+ Markup : 1. A numbered list
+              1. A nested numbered list
+              2. Which is numbered
+          2. Which is numbered
+
 ## Type of data scrap from and Instagram account 
 If the account is public 
 Markup: 1. General Details (Username, User-Id, Number of Followers, Number of Following, Number of posts, Bio-data). 
